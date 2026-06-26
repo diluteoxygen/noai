@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoAI — Settings</title>
+  <meta name="description" content="NoAI extension settings — manage filter lists, categories, and per-site overrides." />
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <img src="../../icons/icon-48.png" width="28" height="28" alt="" />
+        <span>NoAI</span>
+      </div>
+      <nav class="nav">
+        <a class="nav-item active" href="#filter-lists" id="nav-filter-lists">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/></svg>
+          Filter Lists
+        </a>
+        <a class="nav-item" href="#my-rules" id="nav-my-rules">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg>
+          My Rules
+        </a>
+        <a class="nav-item" href="#changelog" id="nav-changelog">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Changelog
+        </a>
+        <a class="nav-item" href="#categories" id="nav-categories">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+          Categories
+        </a>
+        <a class="nav-item" href="#appearance" id="nav-appearance">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          Appearance
+        </a>
+        <a class="nav-item" href="#about" id="nav-about">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          About & Credits
+        </a>
+      </nav>
+    </aside>
+
+    <main class="content">
+
+      <!-- R5: Background-unresponsive banner (hidden by default) -->
+      <div class="bg-error-banner hidden" id="bg-error-banner">
+        <span>⚠ Background script is not responding. Try reloading the extension or restarting the browser.</span>
+      </div>
+
+      <!-- ========== Filter Lists ========== -->
+      <section class="section" id="section-filter-lists">
+        <h1 class="section-title">Filter Lists</h1>
+        <p class="section-desc">NoAI bundles and auto-updates these community AI filter lists every 24 hours.</p>
+
+        <div class="list-cards" id="list-cards">
+          <!-- Injected by JS -->
+        </div>
+
+        <!-- Add custom list -->
+        <div class="card custom-add-card">
+          <h3 class="card-title">Add a custom filter list</h3>
+          <p class="card-desc">Add any uBlock Origin–compatible cosmetic filter list by URL.</p>
+          <form class="custom-list-form" id="custom-list-form">
+            <input type="text" id="custom-list-name" placeholder="List name" autocomplete="off" required />
+            <input type="url" id="custom-list-url" placeholder="https://example.com/list.txt" autocomplete="off" required />
+            <button type="submit" class="btn btn-primary" id="btn-add-list">Add list</button>
+          </form>
+          <p class="form-error hidden" id="custom-list-error"></p>
+        </div>
+      </section>
+
+      <!-- ========== Changelog ========== -->
+      <section class="section hidden" id="section-changelog">
+        <h1 class="section-title">Changelog</h1>
+        <p class="section-desc">Rules added or removed in the last <strong>30</strong> update cycles.</p>
+        <div id="changelog-content">
+          <p class="empty-state">No updates recorded yet. Run an update to see changes.</p>
+        </div>
+      </section>
+
+      <!-- ========== My Rules ========== -->
+      <section class="section hidden" id="section-my-rules">
+        <h1 class="section-title">My Rules</h1>
+        <p class="section-desc">Elements you have manually hidden using the AI Eraser.</p>
+        <div class="my-rules-list" id="my-rules-list">
+          <p class="empty-state">You haven't hidden any elements yet.</p>
+        </div>
+      </section>
+
+      <!-- ========== Categories ========== -->
+      <section class="section hidden" id="section-categories">
+        <h1 class="section-title">Categories</h1>
+        <p class="section-desc">Enable or disable blocking by category. These apply on top of the master switch.</p>
+        <div class="category-list" id="category-list">
+          <!-- Injected by JS -->
+        </div>
+      </section>
+
+      <!-- ========== Appearance ========== -->
+      <section class="section hidden" id="section-appearance">
+        <h1 class="section-title">Appearance</h1>
+        <p class="section-desc">Customize how NoAI looks across all extension pages.</p>
+
+        <div class="card">
+          <h3 class="card-title">Theme</h3>
+          <p class="card-desc">Choose between light, dark, or follow your system preference.</p>
+          <div class="theme-selector" id="theme-selector">
+            <label class="theme-option" data-theme-value="system">
+              <input type="radio" name="theme" value="system" />
+              <div class="theme-preview theme-preview--system">
+                <div class="theme-preview-half theme-preview-half--light"></div>
+                <div class="theme-preview-half theme-preview-half--dark"></div>
+              </div>
+              <span class="theme-option-label">System</span>
+            </label>
+            <label class="theme-option" data-theme-value="light">
+              <input type="radio" name="theme" value="light" />
+              <div class="theme-preview theme-preview--light-full"></div>
+              <span class="theme-option-label">Light</span>
+            </label>
+            <label class="theme-option" data-theme-value="dark">
+              <input type="radio" name="theme" value="dark" />
+              <div class="theme-preview theme-preview--dark-full"></div>
+              <span class="theme-option-label">Dark</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title">Accent Color</h3>
+          <p class="card-desc">Choose a highlight color for the extension interface.</p>
+          <div class="accent-selector" id="accent-selector">
+            <label class="color-swatch-label" title="Blue">
+              <input type="radio" name="accentColor" value="blue" />
+              <div class="color-swatch color-swatch--blue"></div>
+            </label>
+            <label class="color-swatch-label" title="Emerald">
+              <input type="radio" name="accentColor" value="emerald" />
+              <div class="color-swatch color-swatch--emerald"></div>
+            </label>
+            <label class="color-swatch-label" title="Violet">
+              <input type="radio" name="accentColor" value="violet" />
+              <div class="color-swatch color-swatch--violet"></div>
+            </label>
+            <label class="color-swatch-label" title="Rose">
+              <input type="radio" name="accentColor" value="rose" />
+              <div class="color-swatch color-swatch--rose"></div>
+            </label>
+            <label class="color-swatch-label" title="Amber">
+              <input type="radio" name="accentColor" value="amber" />
+              <div class="color-swatch color-swatch--amber"></div>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== About ========== -->
+      <section class="section hidden" id="section-about">
+        <h1 class="section-title">About & Credits</h1>
+        <p class="section-desc">NoAI is built on open, community-maintained filter lists. All credit for the underlying filters belongs to their authors.</p>
+
+        <div class="credit-cards" id="credit-cards">
+          <!-- Injected by JS -->
+        </div>
+
+        <div class="card about-meta">
+          <p>NoAI extension — MIT license.</p>
+          <p>
+            This project wraps existing community work. Please upstream generic filter fixes
+            to the original projects rather than silently patching this fork.
+          </p>
+          <a href="https://github.com" class="text-link" id="about-github-link" target="_blank" rel="noopener">View source on GitHub ↗</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+/* early-hide.css
+ * Injected at document_start on every page.
+ * Currently empty — the cosmetic engine injects its own <style> element
+ * immediately, so a static early-hide stub is not needed for Phase 1.
+ * Placeholder retained so the manifest entry stays valid.
+ */

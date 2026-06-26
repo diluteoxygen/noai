@@ -1,0 +1,69 @@
+{
+  "manifest_version": 3,
+  "name": "NoAI - Remove AI clutter from the internet",
+  "version": "0.1.0",
+  "description": "Centralized control for unsolicited AI features across the web — built on community AI filter lists, uBlock-Origin-style cosmetic filtering.",
+
+  "permissions": [
+    "storage",
+    "alarms",
+    "tabs",
+    "declarativeNetRequest",
+    "scripting",
+    "unlimitedStorage"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "background": {
+    "service_worker": "src/background/index.js",
+    "scripts": ["src/background/index.js"],
+    "type": "module"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/index.js"],
+      "css": ["src/content/early-hide.css"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+
+  "action": {
+    "default_title": "NoAI",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    }
+  },
+
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": ["lists/*", "src/blocked/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "noai@stevoisiak.com",
+      "strict_min_version": "121.0"
+    }
+  }
+}
+

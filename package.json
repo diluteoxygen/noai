@@ -1,0 +1,28 @@
+{
+  "name": "noai-extension",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Centralized AI-feature blocker for Firefox, inspired by uBlock Origin and Privacy Badger.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "web-ext run --source-dir=.",
+    "build": "node esbuild.config.js",
+    "build:prod": "cross-env NODE_ENV=production node esbuild.config.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "web-ext lint --source-dir=.",
+    "test": "npx esbuild scripts/test-parser.ts --bundle --platform=node --outfile=scripts/test-parser.js && node scripts/test-parser.js",
+    "verify-cosmetic": "npx esbuild scripts/verify_cosmetic.ts --bundle --platform=node --outfile=scripts/verify_cosmetic.js && node scripts/verify_cosmetic.js",
+    "test-cosmetic": "node src/content/cosmeticEngine.test.js",
+    "fetch-lists": "node scripts/fetch-filter-lists.js"
+  },
+  "devDependencies": {
+    "@types/webextension-polyfill": "^0.12.5",
+    "cross-env": "^10.1.0",
+    "esbuild": "^0.21.5",
+    "typescript": "^5.5.0",
+    "web-ext": "^8.0.0"
+  },
+  "dependencies": {
+    "webextension-polyfill": "^0.12.0"
+  }
+}

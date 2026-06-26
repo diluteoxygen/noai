@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Blocked by NoAI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    /* --- Dark Theme (Midnight Depth) --- */
+    :root,
+    [data-theme="dark"] {
+      --bg: #0a0e14;
+      --surface: #0d1117;
+      --border: #21262d;
+      --text: #e6edf3;
+      --text-secondary: #8b949e;
+      --text-dim: #484f58;
+      --accent: #58a6ff;
+      --accent-hover: #79c0ff;
+      --badge-bg: rgba(88,166,255,.08);
+      --badge-text: #58a6ff;
+      --btn-primary-bg: #58a6ff;
+      --btn-primary-text: #0d1117;
+      --btn-primary-hover: #79c0ff;
+      --btn-ghost-bg: transparent;
+      --btn-ghost-border: #30363d;
+      --btn-ghost-hover: rgba(48,54,61,.5);
+      --shield-color: #58a6ff;
+      --radius: 12px;
+      --shadow: 0 4px 24px rgba(0,0,0,.6), 0 0 0 1px rgba(88,166,255,.06);
+    }
+
+    /* --- Light Theme (Soft Blue) --- */
+    [data-theme="light"] {
+      --bg: #f0f4f9;
+      --surface: #ffffff;
+      --border: #d0d7de;
+      --text: #1f2328;
+      --text-secondary: #656d76;
+      --text-dim: #8b949e;
+      --accent: #0969da;
+      --accent-hover: #0550ae;
+      --badge-bg: rgba(9,105,218,.06);
+      --badge-text: #0969da;
+      --btn-primary-bg: #0969da;
+      --btn-primary-text: #ffffff;
+      --btn-primary-hover: #0550ae;
+      --btn-ghost-bg: transparent;
+      --btn-ghost-border: #d0d7de;
+      --btn-ghost-hover: #eaeef2;
+      --shield-color: #0969da;
+      --radius: 12px;
+      --shadow: 0 1px 4px rgba(31,35,40,.06), 0 12px 32px rgba(31,35,40,.06);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 24px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 48px 40px 40px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    [data-theme="dark"] .container {
+      background: linear-gradient(180deg, #0d1117, #0a0e14);
+    }
+
+    .shield-icon {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--shield-color);
+    }
+    .shield-icon svg { opacity: 0.9; }
+    [data-theme="dark"] .shield-icon svg {
+      filter: drop-shadow(0 0 12px rgba(88,166,255,.25));
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .desc {
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .domain-badge {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--badge-text);
+      background: var(--badge-bg);
+      padding: 6px 14px;
+      border-radius: 6px;
+      word-break: break-all;
+      margin-bottom: 12px;
+      font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace;
+      letter-spacing: 0.3px;
+      border: 1px solid var(--border);
+    }
+
+    [data-theme="dark"] .domain-badge {
+      background: rgba(88,166,255,.06);
+      border-color: rgba(88,166,255,.12);
+    }
+
+    .reason {
+      color: var(--text-dim);
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: inherit;
+      transition: all 150ms ease;
+      border: none;
+    }
+    .btn:active { transform: scale(0.98); }
+
+    .btn-primary {
+      background: var(--btn-primary-bg);
+      color: var(--btn-primary-text);
+      border: 1px solid var(--btn-primary-bg);
+    }
+    .btn-primary:hover {
+      background: var(--btn-primary-hover);
+      border-color: var(--btn-primary-hover);
+    }
+    [data-theme="dark"] .btn-primary {
+      box-shadow: 0 0 20px rgba(88,166,255,.15);
+    }
+
+    .btn-ghost {
+      background: var(--btn-ghost-bg);
+      color: var(--text);
+      border: 1px solid var(--btn-ghost-border);
+    }
+    .btn-ghost:hover { background: var(--btn-ghost-hover); }
+
+    .btn-dim {
+      color: var(--text-secondary);
+      border-color: transparent;
+    }
+    .btn-dim:hover { border-color: var(--btn-ghost-border); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="shield-icon" aria-hidden="true">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <path d="m9 12 2 2 4-4"/>
+      </svg>
+    </div>
+    <h1>Access Blocked</h1>
+    <p class="desc">
+      NoAI has blocked access to this domain.
+    </p>
+    <div class="domain-badge" id="domain-display">this site</div>
+    <p class="reason">
+      This domain is listed on an active AI blocklist. It is known to host or serve AI-generated content.
+    </p>
+    <div class="actions">
+      <button class="btn btn-primary" id="btn-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Go Back
+      </button>
+      <button class="btn btn-ghost" id="btn-allow-once">Allow for this session</button>
+      <button class="btn btn-ghost btn-dim" id="btn-allow-always">Always allow this site</button>
+    </div>
+  </div>
+  <script src="blocked.js"></script>
+</body>
+</html>

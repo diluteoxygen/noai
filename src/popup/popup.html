@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoAI</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <span class="logo-text">NoAI</span>
+      </div>
+      <a class="options-link" id="btn-options" href="#" title="Open settings">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </a>
+    </header>
+
+    <!-- R5: Background-unresponsive banner (hidden by default) -->
+    <div class="bg-error-banner hidden" id="bg-error-banner">
+      <span>⚠ Background script is not responding. Try reloading the extension or restarting the browser.</span>
+    </div>
+
+
+    <!-- Mode selector -->
+    <section class="mode-section">
+      <span class="section-label">Protection level</span>
+      <div class="segmented-control" id="mode-control" role="radiogroup" aria-label="Filtering Mode">
+        <label class="segment" title="Disabled">
+          <input type="radio" name="filteringMode" value="0" />
+          <span class="segment-text">Off</span>
+        </label>
+        <label class="segment" title="Cosmetic Hiding Only">
+          <input type="radio" name="filteringMode" value="1" />
+          <span class="segment-text">Basic</span>
+        </label>
+        <label class="segment" title="Cosmetic + Network Blocking">
+          <input type="radio" name="filteringMode" value="2" />
+          <span class="segment-text">Strict</span>
+        </label>
+        <div class="segment-selection"></div>
+      </div>
+    </section>
+
+    <!-- Per-site toggle -->
+    <section class="site-section">
+      <div class="site-info">
+        <svg class="site-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <div class="site-details">
+          <span class="site-hostname" id="site-hostname">this site</span>
+          <span class="site-status" id="site-status">Blocking enabled on this site</span>
+        </div>
+      </div>
+      <label class="toggle-switch" id="site-toggle-label" for="site-toggle" aria-label="Per-site toggle">
+        <input type="checkbox" id="site-toggle" role="switch" />
+        <span class="toggle-track">
+          <span class="toggle-thumb"></span>
+        </span>
+      </label>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <svg class="stat-card-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+          <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+          <line x1="1" y1="1" x2="23" y2="23"/>
+        </svg>
+        <div class="stat-card-value" id="stat-hidden">0</div>
+        <div class="stat-card-label">Hidden now</div>
+      </div>
+      <div class="stat-card">
+        <svg class="stat-card-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="8" y1="6" x2="21" y2="6"/>
+          <line x1="8" y1="12" x2="21" y2="12"/>
+          <line x1="8" y1="18" x2="21" y2="18"/>
+          <line x1="3" y1="6" x2="3.01" y2="6"/>
+          <line x1="3" y1="12" x2="3.01" y2="12"/>
+          <line x1="3" y1="18" x2="3.01" y2="18"/>
+        </svg>
+        <div class="stat-card-value" id="stat-rules">0</div>
+        <div class="stat-card-label">Active rules</div>
+      </div>
+    </section>
+
+    <!-- Status message -->
+    <div class="status-message" id="status-message">
+      No AI elements detected on this page yet
+    </div>
+
+    <!-- Water saved -->
+    <section class="water-card">
+      <svg class="water-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+      </svg>
+      <div class="water-text">
+        <div class="water-amount-row">
+          <span class="water-amount" id="water-amount">0 ml</span>
+          <span class="water-suffix">water saved</span>
+        </div>
+        <span class="water-note">Estimate, based on third-party industry figures</span>
+      </div>
+    </section>
+
+    <!-- AI Eraser -->
+    <button class="btn-eraser" id="btn-eraser" title="Manually hide an AI element on this page">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/>
+        <path d="m15 5 4 4"/>
+      </svg>
+      AI eraser
+    </button>
+
+    <!-- Report link -->
+    <a class="report-link" id="btn-report" href="#" title="Report an unblocked AI feature on GitHub">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+        <line x1="4" y1="22" x2="4" y2="15"/>
+      </svg>
+      Report an unblocked AI feature
+    </a>
+  </div>
+
+  <script src="popup.js" type="module"></script>
+
+  <!-- Custom Confirmation Modal for Strict Mode -->
+  <div id="confirm-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Enable Strict Mode?</h3>
+      <p class="modal-desc">
+        Strict mode completely blocks network requests to known AI domains (like Copilot, Grok, etc.). This might break functionality on some websites.
+      </p>
+      <label class="modal-checkbox-label">
+        <input type="checkbox" id="modal-dont-show-again" />
+        Do not show this warning again
+      </label>
+      <div class="modal-actions">
+        <button id="modal-btn-cancel" class="btn btn-secondary">Cancel</button>
+        <button id="modal-btn-proceed" class="btn btn-danger">Proceed</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

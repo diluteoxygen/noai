@@ -1,0 +1,21 @@
+node_modules/
+dist/
+web-ext-artifacts/
+*.log
+.DS_Store
+.cache/
+
+# Generated bundles
+src/**/*.js
+scripts/test-parser.js
+scripts/verify_cosmetic.js
+
+# Agent environment
+.agents/
+
+# Backups
+*.zip
+
+# Fetched filter lists
+lists/GenAI-Blocklist.txt
+lists/GenAI-Blocklist-Extra.txt
