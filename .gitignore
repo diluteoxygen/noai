@@ -13,8 +13,10 @@ scripts/verify_cosmetic.js
 # Agent environment
 .agents/
 
-# Backups
+# Backups and Releases
 *.zip
+noai-release.zip
+noai-source.zip
 
 # Fetched filter lists
 lists/GenAI-Blocklist.txt
