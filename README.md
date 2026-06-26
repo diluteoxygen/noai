@@ -6,8 +6,8 @@
 
 **You didn't ask for AI on every website. Now it is gone.**
 
-[![Chrome](https://img.shields.io/badge/Chrome-Supported-4285F4?style=for-the-badge&logo=Google-chrome&logoColor=white)](#)
-[![Firefox](https://img.shields.io/badge/Firefox-Supported-FF7139?style=for-the-badge&logo=Mozilla-Firefox&logoColor=white)](#)
+[![Chrome](https://img.shields.io/badge/Chrome-Supported-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
+[![Firefox](https://img.shields.io/badge/Firefox-Supported-FF7139?style=for-the-badge&logo=firefox&logoColor=white)](#)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-0052CC?style=for-the-badge)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Sponsor](https://img.shields.io/badge/Sponsor-diluteoxygen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/diluteoxygen)
