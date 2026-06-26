@@ -1,6 +1,5 @@
 <div align="center">
 
-<img src="assets/banner.png" alt="NoAI" width="100%">
 
 # NoAI
 
