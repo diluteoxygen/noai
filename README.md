@@ -1,5 +1,7 @@
 # NoAI
 
+[![Chrome Supported](https://img.shields.io/badge/Chrome-Supported-4285F4?logo=Google-chrome&logoColor=white)](#) [![Firefox Supported](https://img.shields.io/badge/Firefox-Supported-FF7139?logo=Mozilla-Firefox&logoColor=white)](#) [![Manifest V3](https://img.shields.io/badge/Manifest-V3-blue)](#) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 You didn't ask for AI on every website. Now it is gone.
 
 ## The problem
