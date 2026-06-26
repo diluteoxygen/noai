@@ -19,8 +19,8 @@
 
 | Browser | Install from... | Status |
 | :---: | :--- | :--- |
-| <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" height="24"> | **[Chrome Web Store](#)** | `Pending Review` |
-| <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" height="24"> | **[Firefox Add-ons](#)** | `Pending Review` |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" height="24"> | **Chrome Web Store** | 🛑 **Blocked by $5 Developer Fee.** Google requires a one-time fee to publish extensions. Please consider [**sponsoring the project**](https://github.com/sponsors/diluteoxygen) so we can afford to bring NoAI to Chrome! |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" height="24"> | **[Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/noai-remove-ai-clutter/)** | `Pending Review` |
 | <img src="https://api.iconify.design/octicon:mark-github-24.svg?color=white" height="24"> | **[GitHub Releases](https://github.com/diluteoxygen/noai/releases)** | Available as unpacked extension |
 
 Install the extension. It works immediately. No configuration required.
