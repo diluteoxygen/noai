@@ -10,6 +10,41 @@ Google Search, Gmail, YouTube, GitHub, Bing, Amazon, and Reddit inject AI UI by 
 
 This project turns manual configuration into a single master switch. It blocks the UI elements. It drops the network requests to AI endpoints. The internet, minus the slop.
 
+## Filtered content
+
+What gets blocked:
+- Google Search: AI overviews.
+- YouTube: AI comment summaries.
+- GitHub: Copilot PR prompts.
+- Amazon: AI review recaps.
+
+The UI vanishes. The requests drop.
+
+## Blocklists
+
+The engine runs on two lists. You can toggle them in the options.
+
+**Standard list**
+Blocks AI features grafted onto normal websites.
+Example: Google Search overviews, Reddit summaries, Amazon review bots. 
+You keep the site. You lose the slop.
+
+**Extra list (optional)**
+Blocks dedicated AI websites entirely.
+Example: `chatgpt.com`, `claude.ai`, `perplexity.ai`. 
+Turn this on if you don't want AI in the browser at all.
+
+## Installation
+
+Not in the web stores yet. (Reviews take time.)
+
+1. Download the latest release `.zip`.
+2. Unzip it.
+3. Chrome: go to `chrome://extensions`, enable Developer Mode, click Load unpacked.
+4. Firefox: go to `about:debugging`, click This Firefox, click Load Temporary Add-on, select `manifest.json`.
+
+The shortest path to a working extension.
+
 ## Architecture
 
 This is a Universal Manifest V3 codebase. The exact same source code compiles natively for Google Chrome and Mozilla Firefox. It handles the differences between Chrome's Service Worker constraints and Firefox's Event Pages automatically.
@@ -51,6 +86,20 @@ Looking to audit the code or publish an update?
 - [Security](SECURITY.md) — vulnerability reporting.
 
 Read them if you need them. Don't if you don't.
+
+## FAQ
+
+**Does it slow down browsing?**
+No. Network rules are native. CSS hides elements before the render.
+
+**Can I allowlist a site?**
+Yes. Click the popup. Toggle the switch for the domain.
+
+**Why not just use uBlock Origin?**
+uBO fights ads. We fight slop. Maintaining custom AI lists in uBO is manual work. This is automatic.
+
+**Will you add feature X?**
+Probably not. The product is the absence of features.
 
 ## License
 
