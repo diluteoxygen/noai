@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "NoAI - Remove AI clutter from the internet",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Centralized control for unsolicited AI features across the web — built on community AI filter lists, uBlock-Origin-style cosmetic filtering.",
 
   "permissions": [

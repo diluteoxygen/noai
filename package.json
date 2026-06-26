@@ -1,6 +1,6 @@
 {
   "name": "noai-extension",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "description": "Centralized AI-feature blocker for Firefox, inspired by uBlock Origin and Privacy Badger.",
   "license": "MIT",
