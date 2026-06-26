@@ -4,23 +4,21 @@ You didn't ask for AI on every website. Now it is gone.
 
 ## The problem
 
-Every site injects AI by default. There is no master switch. Per-site settings are buried. (If they exist.)
+Google Search, Gmail, YouTube, GitHub, Bing, Amazon, and Reddit inject AI UI by default. They graft overviews, summarizers, and chat widgets onto products you already use. There is no browser-level switch to turn them off. Finding per-site settings is tedious. (If the settings exist at all.)
 
-NoAI is one switch. It blocks the UI. It blocks the endpoints. 
-
-The internet without the slop.
+This project turns manual configuration into a single master switch. It blocks the UI elements. It drops the network requests to AI endpoints. The internet, minus the slop.
 
 ## Architecture
 
-One codebase. Manifest V3. It builds for Chrome and Firefox.
+This is a Universal Manifest V3 codebase. The exact same source code compiles natively for Google Chrome and Mozilla Firefox. It handles the differences between Chrome's Service Worker constraints and Firefox's Event Pages automatically.
 
-It uses Declarative Net Request for endpoints. It injects user-origin CSS for the UI. (User-origin CSS pierces closed shadow DOMs without traversing them.)
+It uses Declarative Net Request (DNR) for aggressive network-level blocking of known AI endpoint domains. For the UI, it relies on cosmetic CSS filters. It injects these filters as user-origin stylesheets. (User-origin CSS natively pierces both open and closed Shadow DOMs at the browser engine level, and overrides site `!important` tags without DOM traversal overhead.)
 
-The simplest engine that holds.
+The simplest engine that holds the line.
 
 ## Prior art
 
-This is a wrapper. It relies on existing lists. Upstream fixes there.
+This extension is a specialized engine for existing lists. It wraps open work. Upstream your generic filter fixes to the original maintainers:
 
 - [Stevo's AI Blocklist](https://github.com/Stevoisiak/Stevos-AI-Blocklist)
 - [laylavish's Huge AI Blocklist](https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist)
@@ -31,23 +29,24 @@ They found the nodes. We just hide them.
 
 ## Local dev
 
-Install. Build. Load.
+Install the dependencies. Build the extension into a loadable format. 
 
 ```bash
 npm install
 npm run build
 ```
 
-Chrome: load the root folder in `chrome://extensions`. 
-Firefox: load `manifest.json` in `about:debugging`.
+For Chrome: load the unpacked root folder in `chrome://extensions`. 
+For Firefox: load `manifest.json` in `about:debugging`.
 
 The shortest path to a running extension.
 
 ## Docs
 
+Looking to audit the code or publish an update? 
 - [Contributing](CONTRIBUTING.md) — local setup.
 - [Publishing](PUBLISHING.md) — store releases.
-- [Security](SECURITY.md) — vulnerabilities.
+- [Security](SECURITY.md) — vulnerability reporting.
 
 Read them if you need them. Don't if you don't.
 
