@@ -25,6 +25,24 @@
 
 Install the extension. It works immediately. No configuration required.
 
+### Manual Installation (Unpacked)
+
+If you downloaded the `.zip` from GitHub Releases, you must load it manually. 
+
+**Chrome / Edge / Brave**
+1. Unzip the downloaded file.
+2. Go to `chrome://extensions` (or `edge://extensions`).
+3. Turn on **Developer mode** (top right).
+4. Click **Load unpacked** and select the unzipped folder.
+
+**Firefox**
+1. Unzip the downloaded file.
+2. Go to `about:debugging#/runtime/this-firefox`.
+3. Click **Load Temporary Add-on**.
+4. Select `manifest.json` inside the folder. 
+
+*(Note: Firefox uninstalls manual add-ons when you restart. For a permanent install, use the official Mozilla store link above.)*
+
 ## The problem
 
 Google Search, Gmail, YouTube, GitHub, Bing, Amazon, and Reddit inject AI UI by default. They graft overviews, summarizers, and chat widgets onto products you already use. There is no browser-level switch to turn them off. Finding per-site settings is tedious. (If the settings exist at all.)
@@ -90,8 +108,7 @@ npm install
 npm run build
 ```
 
-For Chrome: load the unpacked root folder in `chrome://extensions`. 
-For Firefox: load `manifest.json` in `about:debugging`.
+
 
 The shortest path to a running extension.
 
