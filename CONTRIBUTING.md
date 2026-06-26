@@ -10,8 +10,8 @@ Before contributing code, please read the [ARCHITECTURE.md](docs/ARCHITECTURE.md
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/noai-extension.git
-   cd noai-extension
+   git clone https://github.com/diluteoxygen/noai.git
+   cd noai
    ```
 
 2. **Install dependencies:**
