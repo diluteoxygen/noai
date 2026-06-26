@@ -10,13 +10,19 @@
 [![Firefox](https://img.shields.io/badge/Firefox-Supported-FF7139?style=for-the-badge&logo=firefox&logoColor=white)](#)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-0052CC?style=for-the-badge)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Stars](https://img.shields.io/github/stars/diluteoxygen/noai?style=for-the-badge&logo=github)](https://github.com/diluteoxygen/noai/stargazers)
+[![Issues](https://img.shields.io/github/issues/diluteoxygen/noai?style=for-the-badge&logo=github)](https://github.com/diluteoxygen/noai/issues)
 [![Sponsor](https://img.shields.io/badge/Sponsor-diluteoxygen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/diluteoxygen)
 
 </div>
 
 ## Installation
 
-Available on the [Chrome Web Store](#) and [Firefox Add-ons](#). 
+| Browser | Install from... | Status |
+| :---: | :--- | :--- |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" height="24"> | **[Chrome Web Store](#)** | `Pending Review` |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" height="24"> | **[Firefox Add-ons](#)** | `Pending Review` |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" height="24"> | **[GitHub Releases](https://github.com/diluteoxygen/noai/releases)** | Available as unpacked extension |
 
 Install the extension. It works immediately. No configuration required.
 
