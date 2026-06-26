@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/banner%20logo.png" width="150" height="150" alt="NoAI Logo" />
+
 # NoAI - Claim back the Web
 
 **You didn't ask for AI on every website. Now it is gone.**
