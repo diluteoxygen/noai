@@ -5,13 +5,13 @@
 
 **You didn't ask for AI on every website. Now it is gone.**
 
-[![Chrome](https://img.shields.io/badge/Chrome-Supported-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
-[![Firefox](https://img.shields.io/badge/Firefox-Supported-FF7139?style=for-the-badge&logo=firefox&logoColor=white)](#)
-[![Manifest V3](https://img.shields.io/badge/Manifest-V3-0052CC?style=for-the-badge)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Stars](https://img.shields.io/github/stars/diluteoxygen/noai?style=for-the-badge&logo=github)](https://github.com/diluteoxygen/noai/stargazers)
-[![Issues](https://img.shields.io/github/issues/diluteoxygen/noai?style=for-the-badge&logo=github)](https://github.com/diluteoxygen/noai/issues)
-[![Sponsor](https://img.shields.io/badge/Sponsor-diluteoxygen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/diluteoxygen)
+[![Chrome](https://img.shields.io/badge/Chrome-Supported-4285F4?style=flat-square&logo=googlechrome&logoColor=white)](#)
+[![Firefox](https://img.shields.io/badge/Firefox-Supported-FF7139?style=flat-square&logo=firefox&logoColor=white)](#)
+[![Manifest V3](https://img.shields.io/badge/Manifest-V3-0052CC?style=flat-square)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Stars](https://img.shields.io/github/stars/diluteoxygen/noai?style=flat-square&logo=github)](https://github.com/diluteoxygen/noai/stargazers)
+[![Issues](https://img.shields.io/github/issues/diluteoxygen/noai?style=flat-square&logo=github)](https://github.com/diluteoxygen/noai/issues)
+[![Sponsor](https://img.shields.io/badge/Sponsor-diluteoxygen-EA4AAA?style=flat-square&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/diluteoxygen)
 
 </div>
 
