@@ -51,6 +51,10 @@ This project turns manual configuration into a single master switch. It blocks t
 
 ## What it blocks
 
+<p align="center">
+  <img src="assets/comparison.png" alt="Comparison">
+</p>
+
 The standard blocklist removes AI features from daily tools. Examples include:
 
 - **Google**: AI Overviews in search results.
