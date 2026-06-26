@@ -74,11 +74,15 @@ This project turns manual configuration into a single master switch. It blocks t
 
 ## Optional blocklists
 
+<img align="right" src="assets/popup.png" width="250" alt="Extension Popup Settings">
+
 If the standard blocking isn't enough, you can enable additional filters in the settings:
 
 - **AI Chatbots**: Blocks standalone tools like ChatGPT, Claude, and Gemini outright. Turn this on if you want to break the habit of using them.
 - **AI Slop**: Hides low-effort, AI-generated content farms and spam domains from your search results.
 - **Generative AI Extra**: Aggressive UI filtering. Catches edge cases, but carries a higher risk of breaking page layouts.
+
+<br clear="right"/>
 
 ## Architecture
 
