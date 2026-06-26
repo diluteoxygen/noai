@@ -1,21 +1,18 @@
 <div align="center">
 
-# 🚫 NoAI
+<img src="assets/banner.png" alt="NoAI" width="100%">
+
+# NoAI
 
 **You didn't ask for AI on every website. Now it is gone.**
 
-<br>
-
-[![Chrome](https://img.shields.io/badge/Chrome-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)](#)
-[![Firefox](https://img.shields.io/badge/Firefox-FF7139?style=for-the-badge&logo=mozilla-firefox&logoColor=white)](#)
-[![Manifest V3](https://img.shields.io/badge/Manifest_V3-232F3E?style=for-the-badge)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Sponsor diluteoxygen](https://img.shields.io/badge/Sponsor-EA4AAA?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sponsors/diluteoxygen)
+[![Chrome](https://img.shields.io/badge/Chrome-Supported-4285F4?style=for-the-badge&logo=Google-chrome&logoColor=white)](#)
+[![Firefox](https://img.shields.io/badge/Firefox-Supported-FF7139?style=for-the-badge&logo=Mozilla-Firefox&logoColor=white)](#)
+[![Manifest V3](https://img.shields.io/badge/Manifest-V3-0052CC?style=for-the-badge)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Sponsor](https://img.shields.io/badge/Sponsor-diluteoxygen-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/diluteoxygen)
 
 </div>
-
----
-
 
 ## Installation
 
