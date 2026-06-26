@@ -51,19 +51,26 @@ This project turns manual configuration into a single master switch. It blocks t
 
 ## What it blocks
 
-<p align="center">
-  <img src="assets/comparison.png" alt="Comparison" width="600">
-</p>
-
-The standard blocklist removes AI features from daily tools. Examples include:
-
-- **Google**: AI Overviews in search results.
-- **YouTube**: Ask buttons, video summaries, auto-dubbing, and Super Resolution upscaling.
-- **Microsoft**: Copilot buttons across GitHub, Bing, Microsoft 365, and the Azure Portal.
-- **Amazon**: Rufus product and review summaries.
-- **Reddit**: AI Answers and recommended posts from AI subreddits.
-- **Social Media**: Facebook's AI chat, X's Grok buttons, and TikTok videos tagged as AI-generated.
-- **Art Platforms**: Images on Pixiv and DeviantArt with AI-generated labels.
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="assets/comparison.png" alt="Comparison" width="100%">
+    </td>
+    <td width="50%" valign="top">
+      The standard blocklist removes AI features from daily tools. Examples include:
+      <br><br>
+      <ul>
+        <li><b>Google</b>: AI Overviews in search results.</li>
+        <li><b>YouTube</b>: Ask buttons, video summaries, auto-dubbing, and Super Resolution upscaling.</li>
+        <li><b>Microsoft</b>: Copilot buttons across GitHub, Bing, Microsoft 365, and the Azure Portal.</li>
+        <li><b>Amazon</b>: Rufus product and review summaries.</li>
+        <li><b>Reddit</b>: AI Answers and recommended posts from AI subreddits.</li>
+        <li><b>Social Media</b>: Facebook's AI chat, X's Grok buttons, and TikTok videos tagged as AI-generated.</li>
+        <li><b>Art Platforms</b>: Images on Pixiv and DeviantArt with AI-generated labels.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## Optional blocklists
 
