@@ -52,7 +52,7 @@ This project turns manual configuration into a single master switch. It blocks t
 ## What it blocks
 
 <p align="center">
-  <img src="assets/comparison.png" alt="Comparison">
+  <img src="assets/comparison.png" alt="Comparison" width="600">
 </p>
 
 The standard blocklist removes AI features from daily tools. Examples include:
