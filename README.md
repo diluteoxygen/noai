@@ -1,7 +1,7 @@
 <div align="center">
 
 
-# NoAI
+# NoAI - Claim back the Web
 
 **You didn't ask for AI on every website. Now it is gone.**
 
