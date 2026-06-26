@@ -1,50 +1,56 @@
-# NoAI — Remove AI clutter from the internet.
+# NoAI
 
-> A centralized on/off switch for unsolicited AI features across the web — built the way uBlock Origin handles ads, but aimed at AI overviews, AI sidebars, AI buttons, and AI chat widgets that get grafted onto products you didn't ask to have them in.
+You didn't ask for AI on every website. Now it is gone.
 
-## The problem this solves
+## The problem
 
-Google Search, Gmail, Docs, YouTube, GitHub, Bing, Amazon, Reddit, X, and a growing list of everything else now inject AI UI — overviews, summarizers, assistants, auto-tags — by default, with no single browser-level switch to turn it off. Today that means hunting down a different per-product setting (if one even exists) on every single site.
+Every site injects AI by default. There is no master switch. Per-site settings are buried. (If they exist.)
 
-This project turns "subscribe to two GitHub filter lists and hope you remembered to" into one dedicated extension with one master switch.
+NoAI is one switch. It blocks the UI. It blocks the endpoints. 
 
-## Architecture & Cross-Browser Support
+The internet without the slop.
 
-This extension is built on a **Universal Manifest V3 Codebase**, meaning the exact same source code compiles natively for both Google Chrome and Mozilla Firefox.
+## Architecture
 
-### Key Technologies
-- **Declarative Net Request (DNR)**: Used for aggressive network-level blocking of known AI endpoint domains.
-- **Shadow DOM Piercing**: Injects cosmetic CSS filters as user-origin stylesheets (`origin: "USER"`) to bypass closed Shadow DOMs and `!important` tags.
-- **Service Workers & Event Pages**: Seamlessly bridges the gap between Chrome's Service Worker requirement and Firefox's preference for Event Pages.
+One codebase. Manifest V3. It builds for Chrome and Firefox.
 
-## Credits & Prior Art
+It uses Declarative Net Request for endpoints. It injects user-origin CSS for the UI. (User-origin CSS pierces closed shadow DOMs without traversing them.)
 
-This project is a wrapper and an extension of existing open work. Please upstream generic filter fixes to the original projects:
+The simplest engine that holds.
+
+## Prior art
+
+This is a wrapper. It relies on existing lists. Upstream fixes there.
+
 - [Stevo's AI Blocklist](https://github.com/Stevoisiak/Stevos-AI-Blocklist)
 - [laylavish's Huge AI Blocklist](https://github.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist)
 - [Fanboy's Anti-AI Suggestion List](https://github.com/easylist/easylist/blob/master/fanboy-addon/fanboy_ai_suggestions.txt)
-- [uBlock Origin](https://github.com/gorhill/uBlock) — cosmetic filtering architecture inspiration.
+- [uBlock Origin](https://github.com/gorhill/uBlock)
 
-## Developer Documentation
+They found the nodes. We just hide them.
 
-Looking to contribute, audit the code, or publish an update? See our guides:
-- [Contributing Guide](CONTRIBUTING.md) — How to set up the project locally.
-- [Publishing Guide](PUBLISHING.md) — How to package and release the extension to Chrome and Firefox.
-- [Security Policy](SECURITY.md) — How to responsibly report vulnerabilities.
+## Local dev
 
-## Getting Started Locally
+Install. Build. Load.
 
 ```bash
-# Install dependencies
 npm install
-
-# Build the extension into a loadable format
 npm run build
-
-# Load the unpacked extension
-# Chrome: Load the root folder in chrome://extensions
-# Firefox: Load manifest.json in about:debugging
 ```
 
+Chrome: load the root folder in `chrome://extensions`. 
+Firefox: load `manifest.json` in `about:debugging`.
+
+The shortest path to a running extension.
+
+## Docs
+
+- [Contributing](CONTRIBUTING.md) — local setup.
+- [Publishing](PUBLISHING.md) — store releases.
+- [Security](SECURITY.md) — vulnerabilities.
+
+Read them if you need them. Don't if you don't.
+
 ## License
-MIT. Matches the filter lists this project builds on.
+
+MIT. The shortest license that works.
