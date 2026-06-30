@@ -62,7 +62,7 @@ If the standard blocking isn't enough, you can enable additional filters in the 
 | Browser | Install from... | Status |
 | :---: | :--- | :--- |
 | <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg" height="24"> | **Chrome Web Store** | ✨ **Coming soon!** We'd love to bring NoAI to Chrome, but Google requires a small $5 developer fee. If you'd like to help us get there, please consider [**supporting the project**](https://github.com/sponsors/diluteoxygen)! ☕ |
-| <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" height="24"> | **[Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/noai-remove-ai-clutter/)** | ⏳ **Under Review!** Mozilla is currently checking our submission. It should be live and ready to install very soon! |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Firefox_logo%2C_2019.svg" height="24"> | **[Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/noai-remove-ai-clutter/)** | 🎉 Now Live! The extension is now available to install from the Firefox Add-ons store! If you try it, please consider leaving a rating or sharing your feedback. Bug reports, feature requests, and suggestions are always welcome, they help make the extension better for everyone. |
 | <img src="https://api.iconify.design/octicon:mark-github-24.svg?color=white" height="24"> | **[GitHub Releases](https://github.com/diluteoxygen/noai/releases)** | 📦 **Available Now!** Download the latest `.zip` [here](https://github.com/diluteoxygen/noai/releases) and load it manually into your browser. |
 
 Install the extension. It works immediately. No configuration required.
